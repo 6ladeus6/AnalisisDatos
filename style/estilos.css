@@ -1,0 +1,34 @@
+.banner{
+    background-image: url(../assets/img/banner.jpg);
+    position: relative;
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    padding: 25%;
+    z-index: 1;
+}
+.menu{
+    background-color: #B67F73;
+}
+
+.bannerDos{
+    background-image: url(../assets/img/banner2.jpg);
+    position: relative;
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    padding: 25%;
+}
+
+.banner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 50%;
+    z-index: -1;
+  
+}

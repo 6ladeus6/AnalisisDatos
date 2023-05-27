@@ -42,7 +42,7 @@
             <form action="">
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1"><i class="bi bi-people-fill"></i></span>
-                    <input type="text" class="form-control" placeholder="Nombre">
+                    <input type="text" class="form-control" placeholder="Nombre" id="nombre">
                   </div>
                   <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope-at-fill"></i></span>
@@ -63,35 +63,42 @@
                 <div class="col-12 col-md-8">
                     <h2>Reportes empresariales</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit corrupti repellat minus facilis esse est, cum laudantium suscipit amet, maiores assumenda? Suscipit assumenda aspernatur soluta dolores harum mollitia, est eius?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat qui laboriosam magnam, soluta distinctio recusandae officia maiores blanditiis animi minima cupiditate, accusantium aliquid nobis cumque suscipit atque voluptatibus. Placeat nam eius laborum doloremque autem voluptatum tempore, magnam natus, numquam, repellat ducimus odit ipsam? Minima beatae magnam earum consectetur? Assumenda esse, praesentium magnam animi molestiae ab amet illo necessitatibus voluptates voluptas consequatur in, dicta ipsa explicabo minima harum, officiis recusandae obcaecati aliquam minus. Sequi, natus porro impedit iste assumenda soluta in architecto rerum quam, veritatis quidem rem ducimus! Libero harum expedita suscipit laboriosam praesentium consequatur aut blanditiis, adipisci possimus hic cumque?</p>
-                    <table class="table">
-                        <thead>
-                          <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                    <button type="button" class="btn btn-primary" id="btngenerarreporte">Generar Reporte</button>
+                    <div class="d-none my-5" id="contenedor">
+                      <div class="container my-3">
+                        <div class="row">
+                          <div class="col-12">
+                            <h4 id="mensaje">Apreciado usuario, el reporte generado es: </h4>
+                          </div>
+                        </div>
+                      </div>
+                      <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Reporte Jovenes</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Reporte Experimentados</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Reporte bajo salario </button>
+                        </li>
+                  
+                      </ul>
+                      <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                          <iframe src="./table/tablaJovenes.html" class="w-100" height="400px"></iframe>
+                        </div>
+                        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                          <iframe src="./table/tablaoprtunidaddemejora.html" class="w-100" height="400px"></iframe>
+                        </div>
+                        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                          <iframe src="./table/tablabajossalarios.html" class="w-100" height="400px"></iframe>
+  
+                        </div>
+                      </div>
+
+                    </div>
+                   
                 </div>
                 <div class="col-12 col-md-4">
                     <img src="./assets/img/empleados.png" alt="" class="im-fluid w100">
@@ -116,7 +123,7 @@
             </div>
         </section>
     </footer>
-    
+    <script src="../controllers/controlador.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>
